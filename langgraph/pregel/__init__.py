@@ -1051,7 +1051,7 @@ def _apply_writes(
 
     # Update reserved channels
     pending_writes_by_channel[ReservedChannels.is_last_step] = [
-        for_step + 1 == config["recursion_limit"]
+        for_step == config["recursion_limit"]
     ]
 
     updated_channels: set[str] = set()
